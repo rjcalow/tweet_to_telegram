@@ -22,9 +22,10 @@ options = Options()
 options.add_argument("--headless")
 options.add_argument("--width=800")
 options.add_argument("--height=1400")
-driver = webdriver.Firefox(executable_path=str(driverpath), options=options)
+
 
 def screenshot(url):
+    driver = webdriver.Firefox(executable_path=str(driverpath), options=options)
     if "https://twitter.com" in url:
         url = url.replace("https://twitter.com", "https://m.twitter.com")
 
